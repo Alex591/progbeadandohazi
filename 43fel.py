@@ -17,4 +17,20 @@ def romaibolarab(betu):
         return 1000
     return 0
     #a return 0 azért kell,ha esetleg egy olyan betű kerülne ide aminek nem kéne itt lennie
+osszeg=0
+romailista=[]
+arablista=[]
+#A szótárban lesz majd kulcsként a római szám,értékként pedig az arab,hogy ne kelljen megint kiszamolni
+#mégse,mert többször is előfordulhat egy ugyanolyan romai szam
+while osszeg<1000:
+    inputosszeg=0
+    romai=input("Adjon egy római számot: ")
+    for x in romai:
+        arab=romaibolarab(x.upper())
+
+
+        
+for i in range(len(romai)):
+    print(f"{romailista[i]} : {arablista[i]}")
+
 
