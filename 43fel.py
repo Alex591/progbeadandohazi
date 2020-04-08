@@ -25,12 +25,16 @@ arablista=[]
 while osszeg<1000:
     inputosszeg=0
     romai=input("Adjon egy római számot: ")
+    romailista.append(romai)
     for x in romai:
         arab=romaibolarab(x.upper())
+        inputosszeg+=arab
+    osszeg+=inputosszeg
+    arablista.append(inputosszeg)
 
 
-        
-for i in range(len(romai)):
+
+for i in range(len(romai)+1):
     print(f"{romailista[i]} : {arablista[i]}")
 
 
