@@ -26,15 +26,22 @@ while osszeg<1000:
     inputosszeg=0
     romai=input("Adjon egy római számot: ")
     romailista.append(romai)
+    #Ha kissebb az elozo akkor ki kell vonni
+    elozoarab=10001
+    arab=0
     for x in romai:
         arab=romaibolarab(x.upper())
         inputosszeg+=arab
+        #mivel már először hozzáadtuk a kissebbet is azt is ki kell vonni
+        if elozoarab<arab:
+            inputosszeg-=2*elozoarab
+        elozoarab=arab
     osszeg+=inputosszeg
     arablista.append(inputosszeg)
 
 
 
-for i in range(len(romai)+1):
+for i in range(len(romailista)):
     print(f"{romailista[i]} : {arablista[i]}")
 
 
