@@ -25,6 +25,8 @@ arablista=[]
 while osszeg<1000:
     inputosszeg=0
     romai=input("Adjon egy római számot: ")
+    #hülyeségvédő,ha az illető nem római számot ír be:a romaibolarab függvény intézi,mivel 0-t returnöl ha olyat kap ami neki nem tetszik
+
     romailista.append(romai)
     #Ha kissebb az elozo akkor ki kell vonni
     elozoarab=10001
